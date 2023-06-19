@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*
+	New Perspectives on HTML5 and CSS3, 8th Edition
+	Author: Fadima Macalou
+	Date: 05-04-2023
+	
+	Filename: js_styles.css 
+
+*/
+
+
+/* Variabes */  
+$orange: #ffa600;
+$grey:#f3f3f3;
+$white: #fff;
+$base-color:$orange ;
+
+
+/* Mixin's */  
+@mixin transition {
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+@mixin corners ($radius) {
+-moz-border-radius: $radius;
+-webkit-border-radius: $radius;
+border-radius: $radius; 
+-khtml-border-radius: $radius; 
+}
+
+body {
+background:#FC46AA;
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+height:100%;
+}
+
+.wrapper {
+width: 800px;
+margin: 30px auto;
+color:#FA86C4;
+text-align:center;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+#seconds, #tens{
+  font-size:2em;
+}
+
+button{
+@include corners (5px);
+background:#FEC5E5;
+color:#FF1694;
+border: solid 1px #FF1694;
+text-decoration:none;
+cursor:pointer;
+font-size:1.2em;
+padding:18px 10px;
+width:180px;
+margin: 10px;
+ outline: none;
+  &:hover{
+	@include transition;
+	background:#E11584;
+	border: solid 1px #FF1694;
+	color:#FD5DA8;
+	}
+}
+
+footer{
+	text-align: center;
+	color:#FA86C4;
+	background: #FD5DA8;
+	border: solid #FA86C4;
+ }
+}

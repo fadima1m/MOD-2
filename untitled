@@ -1,0 +1,83 @@
+from datetime import *
+import random
+now = datetime.now()
+current_time = now.strftime("%H:%M:%S")
+current_date = now.strftime("%b %d, %y")
+
+print("Programmer: Fadima Macalou")
+print(f'Lab 12.3 {current_date} {current_time}\n')
+
+ROCK = 1
+PAPER = 2
+SCISSORS = 3
+
+
+def user_input():
+    username = input("Enter your name: ")
+    user_menu = input(f"{username}, Enter 1 for rock, 2 for paper, 3 for scissors: ")
+    three_choices = [ROCK, PAPER, SCISSORS]
+    rockPaperScissors(username, user_menu, three_choices)
+
+
+def rockPaperScissors(username, user_menu, three_choices):
+    comp_choice = random.choice(three_choices)
+    print(f"Computer chose {comp_choice}, {username} You chose {user_menu}")
+
+
+def choice_string(comp_choice, username, user_menu):
+    while True:
+        if user_menu == comp_choice:
+            print("You made the same choice as the computer. Starting over")
+        elif user_menu == ROCK:
+            if comp_choice == SCISSORS:
+                print("The computer chose scissors, You chose rock.")
+                print(f"{username}, You won the game.")
+            else:
+                print("The computer chose paper, You chose rock.")
+                print("The computer wins the game.")
+        elif user_menu == PAPER:
+            if comp_choice == ROCK:
+                print("The computer chose rock, You chose paper.")
+                print(f"{username}, You won the game.")
+            else:
+                print("The computer chose rock, You chose scissors.")
+                print(f"The computer wins the game.")
+        elif user_menu == SCISSORS:
+            if comp_choice == PAPER:
+                print("The computer chose paper, You chose scissors.")
+                print(f"{username}, You won the game.")
+            else:
+                print("The computer chose rock, You chose scissors.")
+                print("The computer wins the game.")
+
+                play_again = input("Play again? (y/n): ")
+                if play_again.lower() != "y":
+                    break
+
+
+if __name__ == '__main__':
+    user_input()
+
+// Title of Slideshow
+let lightboxTitle = "My Western Vacation";
+
+// Names of the image files shown in the slideshow
+let imgFiles = ["photo01.jpg", "photo02.jpg", "photo03.jpg", "photo04.jpg", "photo05.jpg", "photo06.jpg", "photo07.jpg", "photo08.jpg", "photo09.jpg", "photo10.jpg", "photo11.jpg", "photo12.jpg"];
+
+// Captions associated with each image
+let imgCaptions = new Array(12);
+imgCaptions[0]="Sky Pond (Rocky Mountain National Park)";
+imgCaptions[1]="Buffalo on the Plains (South Dakota)";
+imgCaptions[2]="Garden of the Gods (Colorado Springs)";
+imgCaptions[3]="Elephant Head Wild Flower (Rocky Mountain National Park)";
+imgCaptions[4]="Double Rainbow (Colorado National Monument)";
+imgCaptions[5]="Moose in the Wild (Grand Lake, Colorado)";
+imgCaptions[6]="Camas Wild Flower (Rocky Mountain National Park)";
+imgCaptions[7]="Chasm Lake (Rocky Mountain National Park)";
+imgCaptions[8]="Teton Crest Trail (Grand teton National Park)";
+imgCaptions[9]="The Notch Trail (Badlands national Park)";
+imgCaptions[10]="Sprague Lake (Rocky Mountain National Park)";
+imgCaptions[11]="Longs Peak Trail (Rocky Mountain National Park)";
+
+// Count of images in the slideshow
+let imgCount = imgFiles.length;
