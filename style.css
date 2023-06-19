@@ -1,0 +1,58 @@
+body {
+    background-color: forestgreen;
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+table {
+    width: 600px;
+    margin: 0 auto;
+    background-color: lightgreen;
+    border-collapse: collapse;
+    text-align: left;
+    float: left;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+img {
+    border: 3px solid forestgreen;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: 200px;
+    height: 150px;
+}
+
+caption {
+    color: white;
+    font-size: 18px;
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
+}
+
+ul {
+    list-style-type: decimal;
+    margin-left: 40px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
